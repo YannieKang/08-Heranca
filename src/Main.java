@@ -7,6 +7,21 @@ public class Main {
         empregado[2] = new EmpregadoHorista(3, "Ana", 200, 300);
         empregado[3] = new EmpregadoComissionado(4, "Laura", 50000, 25);
 
+        // for tradicional
+        for(int i = 0; i < empregado.length; i++) {
+            System.out.println(empregado[i].matricula);
+            System.out.println(empregado[i].nome);
+            System.out.println();
+        }
+
+        // for genérico
+        System.out.println("#########################################");
+        for(Empregado e : empregado) {
+            System.out.println(e.matricula);
+            System.out.println(e.nome);
+            System.out.println(e.calcularSalario());
+            System.out.println();
+        }
         
     }
 }
